@@ -15,8 +15,8 @@ Backend para el proyecto de Hospitalización en casa trabajado en el marco del c
 - [ ] Incluir el código de JWT (autenticación)
 - [x] Modelos
 - [ ] Migraciones (base de datos local)
-- [ ] URLs
-- [ ] Vistas y serializadores
+- [x] URLs
+- [x] Vistas y serializadores
 - [ ] Migración a Heroku
 ---
 ### Notas
