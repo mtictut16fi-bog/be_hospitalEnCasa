@@ -18,15 +18,11 @@ class MedicoListCreateView(generics.ListCreateAPIView):
 
     def post(self, request, *args, **kwargs):
         print("POST a Medico")
-        print(request.data)
         usuarioData = request.data.pop('usuario')
         serializerU  = UsuarioSerializer(data=usuarioData)
-        print(serializerU.initial_data)
         serializerU.is_valid(raise_exception=True)
         usuario = serializerU.save()
         enfData = request.data   
-        print("**Usuario creado**")
-        print(usuario.id)
         enfData.update({"usuario":usuario.id})
         serializerEnf = MedicoSerializer(data=enfData)
         serializerEnf.is_valid(raise_exception=True)
